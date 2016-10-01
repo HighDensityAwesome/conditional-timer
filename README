@@ -1,0 +1,15 @@
+This is a simple conditional shutdown "timer". Currently the program is configured to shutdown 
+after a file has been successfully downloaded (using Google Chrome).
+
+The program continually looks to see if a path (the filename that Unconfirmed\ xxxxxx.crdownload
+will eventually be changed to) exists, and if it does, initialise graceful shutdown (with a
+slight delay to allow the download to "settle" and name and save the download etc.
+
+# NOTE #
+Currently the program has to be run with "sudo python ${FILE-NAME.py}" as shutdown requires
+sudo
+
+# TO DO #
+Look into modifying program so that it doesn't need to be run with sudo (calling sudo in os.sysyem
+and piping in known sudo password, OR even further letting the program find sudo password - will 
+most likely need to be given certain chmod value to allow this, dangerous?)
